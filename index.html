@@ -1066,6 +1066,107 @@
         color: rgba(255, 255, 255, 0.95);
       }
 
+      /* Influencer / Worn by Favorites Section */
+      .influencer-section {
+        background: #fff;
+        padding: 60px 20px;
+      }
+      .influencer-grid {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .influencer-card {
+        text-align: center;
+        max-width: 240px;
+      }
+      .influencer-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 16px;
+        border: 3px solid var(--accent-light);
+        box-shadow: 0 4px 20px rgba(114, 47, 55, 0.2);
+      }
+      .influencer-card h4 {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: var(--primary);
+      }
+      .influencer-handle {
+        font-size: 13px;
+        color: var(--warm-gray);
+        margin-bottom: 12px;
+      }
+      .influencer-quote {
+        font-size: 14px;
+        font-style: italic;
+        color: var(--text-soft);
+        line-height: 1.5;
+      }
+      @media (max-width: 768px) {
+        .influencer-grid {
+          gap: 30px;
+        }
+        .influencer-card {
+          max-width: 150px;
+        }
+        .influencer-img {
+          width: 80px;
+          height: 80px;
+        }
+        .influencer-card h4 {
+          font-size: 14px;
+        }
+        .influencer-quote {
+          font-size: 12px;
+        }
+      }
+
+      /* Press / As Featured In Section */
+      .press-section {
+        background: var(--cream);
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .press-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--warm-gray);
+        margin-bottom: 20px;
+      }
+      .press-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      .press-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--text-soft);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        opacity: 0.7;
+      }
+      @media (max-width: 768px) {
+        .press-logos {
+          gap: 24px;
+        }
+        .press-logo {
+          font-size: 14px;
+        }
+      }
+
       /* Founder Story */
       .founder-section {
         background: var(--cream);
@@ -1853,65 +1954,7 @@
       <span>hugs you back</span> &nbsp;|&nbsp; 30-day returns
     </div>
 
-    <!-- As Seen In -->
-    <section class="press-section">
-      <p class="press-label">As Featured In</p>
-      <div class="press-logos">
-        <span class="press-logo">Vogue</span>
-        <span class="press-logo">Elle</span>
-        <span class="press-logo">Refinery29</span>
-        <span class="press-logo">Who What Wear</span>
-        <span class="press-logo">Byrdie</span>
-      </div>
-    </section>
-
-    <!-- Problem Statement Section -->
-    <section class="problem-section">
-      <div class="section">
-        <div class="problem-grid">
-          <div class="problems-list">
-            <h2 class="problem-title">Sound Familiar?</h2>
-            <div class="problem-item">
-              <span class="problem-x">✕</span>
-              <span>Shapewear that squeezes so tight you can't breathe</span>
-            </div>
-            <div class="problem-item">
-              <span class="problem-x">✕</span>
-              <span>That anxious, restless feeling that won't go away</span>
-            </div>
-            <div class="problem-item">
-              <span class="problem-x">✕</span>
-              <span
-                >Compression that flattens your curves instead of lifting</span
-              >
-            </div>
-            <div class="problem-item">
-              <span class="problem-x">✕</span>
-              <span>Getting overheated in traditional shapewear</span>
-            </div>
-            <div class="problem-item">
-              <span class="problem-x">✕</span>
-              <span>Uncomfortable snaps that dig into your skin</span>
-            </div>
-          </div>
-          <div class="solution-box">
-            <h3>There's a Better Way</h3>
-            <p>
-              What if your bodysuit could actually <em>calm</em> your nervous
-              system? Variable-tension zones that <em>hug</em> you gently.
-              Graphene fabric that breathes. Magnetic closures you can't feel.
-              This isn't shapewear. It's wearable wellness.
-            </p>
-            <div class="solution-highlight">
-              <span class="check-icon">✓</span>
-              Engineered for emotional regulation, not just figure control
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Content -->
+    <!-- Main Content - HERO FIRST (Above the Fold) -->
     <div class="container">
       <div class="product-hero">
         <!-- Gallery -->
@@ -2091,6 +2134,102 @@
         </div>
       </div>
     </div>
+
+    <!-- Problem Statement Section - After Hero -->
+    <section class="problem-section">
+      <div class="section">
+        <div class="problem-grid">
+          <div class="problems-list">
+            <h2 class="problem-title">Sound Familiar?</h2>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>Shapewear that squeezes so tight you can't breathe</span>
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>That anxious, restless feeling that won't go away</span>
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span
+                >Compression that flattens your curves instead of lifting</span
+              >
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>Getting overheated in traditional shapewear</span>
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>Uncomfortable snaps that dig into your skin</span>
+            </div>
+          </div>
+          <div class="solution-box">
+            <h3>There's a Better Way</h3>
+            <p>
+              What if your bodysuit could actually <em>calm</em> your nervous
+              system? Variable-tension zones that <em>hug</em> you gently.
+              Graphene fabric that breathes. Magnetic closures you can't feel.
+              This isn't shapewear. It's wearable wellness.
+            </p>
+            <div class="solution-highlight">
+              <span class="check-icon">✓</span>
+              Engineered for emotional regulation, not just figure control
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Worn by Favorites - Influencer Section -->
+    <section class="influencer-section">
+      <div class="section">
+        <h2 class="section-title" style="font-size: 28px; margin-bottom: 12px">
+          Worn by Your Favorites
+        </h2>
+        <p class="section-subtitle" style="margin-bottom: 32px">
+          Join thousands who've discovered the calm.
+        </p>
+        <div class="influencer-grid">
+          <div class="influencer-card">
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face"
+              alt="Influencer"
+              class="influencer-img"
+            />
+            <h4>@alix.earle</h4>
+            <p class="influencer-handle">2.1M followers</p>
+            <p class="influencer-quote">
+              "Finally a bodysuit I can actually breathe in"
+            </p>
+          </div>
+          <div class="influencer-card">
+            <img
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop&crop=face"
+              alt="Influencer"
+              class="influencer-img"
+            />
+            <h4>@monet.mcmichael</h4>
+            <p class="influencer-handle">1.8M followers</p>
+            <p class="influencer-quote">
+              "The hug I needed, not the squeeze I dreaded"
+            </p>
+          </div>
+          <div class="influencer-card">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face"
+              alt="Influencer"
+              class="influencer-img"
+            />
+            <h4>@alexcooper</h4>
+            <p class="influencer-handle">1.5M followers</p>
+            <p class="influencer-quote">
+              "My anxiety bodysuit - sounds weird, feels amazing"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- The Difference Section -->
     <section class="difference-section">
@@ -2529,6 +2668,18 @@
             <div class="delivery-time">5-7 days</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- As Seen In - Press Section -->
+    <section class="press-section">
+      <p class="press-label">As Featured In</p>
+      <div class="press-logos">
+        <span class="press-logo">Vogue</span>
+        <span class="press-logo">Elle</span>
+        <span class="press-logo">Refinery29</span>
+        <span class="press-logo">Who What Wear</span>
+        <span class="press-logo">Byrdie</span>
       </div>
     </section>
 
