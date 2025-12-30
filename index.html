@@ -1,0 +1,3049 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=5"
+    />
+    <title>Aura-Sculpt Bodysuit - The Bodysuit That Hugs You Back</title>
+    <meta
+      name="description"
+      content="Finally, a bodysuit that feels like a weighted blanket you can wear to dinner. Variable-tension zones hug you gently - not squeeze. Anti-anxiety sensory design for Gen Z."
+    />
+    <meta
+      name="keywords"
+      content="anti-anxiety bodysuit, sensory bodysuit, weighted blanket clothing, gentle compression, proprioceptive feedback, calming shapewear"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://aura-sculpt.netlify.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="product" />
+    <meta
+      property="og:title"
+      content="Aura-Sculpt Bodysuit - Your Weighted Blanket Learned To Go Out"
+    />
+    <meta
+      property="og:description"
+      content="The bodysuit that hugs you back. Variable-tension zones for different body areas. Feels like being held, not squeezed. $59 (was $148)."
+    />
+    <meta property="og:image" content="./images/product/photo_001 (1).jpg" />
+    <meta property="og:url" content="https://aura-sculpt.netlify.app/" />
+
+    <!-- Performance -->
+    <meta name="theme-color" content="#1a1a1a" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Reset & Base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        color: #1a1a1a;
+        line-height: 1.6;
+        background: #faf9f7;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+      }
+
+      /* Color System - Deep Obsidian/Cherry/Espresso */
+      :root {
+        --primary: #1a1a1a;
+        --primary-rgb: 26, 26, 26;
+        --accent: #722f37;
+        --accent-light: #8b3a44;
+        --accent-rgb: 114, 47, 55;
+        --espresso: #4a332d;
+        --cream: #faf9f7;
+        --warm-gray: #9a918a;
+        --text: #1a1a1a;
+        --text-soft: #666;
+        --border: #e8e4df;
+        --success: #2d6a4f;
+      }
+
+      /* Premium Micro-Interactions */
+      @keyframes gentlePulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.02);
+          opacity: 0.9;
+        }
+      }
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.01);
+        }
+      }
+      @keyframes floatUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+      @keyframes softGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(114, 47, 55, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(114, 47, 55, 0.4);
+        }
+      }
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(45, 106, 79, 0.7);
+        }
+        50% {
+          box-shadow: 0 0 0 8px rgba(45, 106, 79, 0);
+        }
+      }
+
+      /* Announcement Bar */
+      .announcement {
+        background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 100%);
+        color: #fff;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+      .announcement span {
+        color: var(--accent-light);
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Hero Section */
+      .product-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding: 50px 20px;
+        align-items: start;
+      }
+
+      /* Gallery */
+      .gallery {
+        position: sticky;
+        top: 20px;
+      }
+      .main-img {
+        width: 100%;
+        border-radius: 16px;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        background: #f0eeeb;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .main-img:hover {
+        transform: scale(1.01);
+      }
+      .thumbs {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .thumb {
+        width: 80px;
+        height: 100px;
+        border-radius: 8px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        opacity: 0.7;
+        flex-shrink: 0;
+      }
+      .thumb:hover,
+      .thumb.active {
+        border-color: var(--accent);
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      /* Product Info */
+      .product-info {
+        padding-top: 20px;
+      }
+      .product-info h1 {
+        font-size: clamp(36px, 5vw, 52px);
+        line-height: 1.1;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+      }
+      .tagline {
+        font-size: 18px;
+        color: var(--text-soft);
+        margin-bottom: 24px;
+        line-height: 1.6;
+      }
+      .tagline em {
+        font-style: normal;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      /* Social Proof Strip */
+      .social-proof {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 20px;
+        background: #fff;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .stars {
+        color: #f59e0b;
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+      .rating-text {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .live-viewers {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        font-size: 13px;
+        color: var(--success);
+        font-weight: 600;
+      }
+      .pulse-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--success);
+        border-radius: 50%;
+        animation: pulse-dot 2s infinite;
+      }
+
+      /* Price Box */
+      .price-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 24px;
+        background: linear-gradient(135deg, #fff 0%, #fdf8f6 100%);
+        border-radius: 12px;
+        margin-bottom: 20px;
+        border: 2px solid var(--accent);
+      }
+      .price {
+        font-family: "Inter", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .old-price {
+        font-size: 20px;
+        color: var(--warm-gray);
+        text-decoration: line-through;
+      }
+      .badge {
+        background: var(--accent);
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        animation: gentlePulse 3s infinite;
+      }
+
+      /* Urgency Timer */
+      .urgency-timer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 20px;
+        background: linear-gradient(135deg, var(--accent) 0%, #5a252c 100%);
+        color: #fff;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+      .timer-label {
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .timer-digits {
+        display: flex;
+        gap: 6px;
+      }
+      .timer-box {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-family: monospace;
+        font-size: 18px;
+        font-weight: 700;
+        min-width: 42px;
+        text-align: center;
+      }
+
+      /* Size Selector - Extended Range */
+      .size-section {
+        margin-bottom: 24px;
+      }
+      .size-label {
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .size-guide-link {
+        font-size: 13px;
+        color: var(--accent);
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .size-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+      }
+      .size-btn {
+        font-family: "Inter", sans-serif;
+        padding: 14px 8px;
+        border: 2px solid var(--border);
+        background: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 13px;
+        transition: all 0.2s ease;
+        position: relative;
+      }
+      .size-btn:not(:disabled):hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(114, 47, 55, 0.15);
+      }
+      .size-btn.selected {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+      }
+      .size-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        background: #f5f5f5;
+      }
+      .size-btn:disabled::after {
+        content: "Sold Out";
+        position: absolute;
+        bottom: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 9px;
+        color: var(--accent);
+        white-space: nowrap;
+        font-weight: 700;
+      }
+
+      /* CTAs */
+      .cta-section {
+        margin-bottom: 24px;
+      }
+      .cta-btn {
+        font-family: "Inter", sans-serif;
+        width: 100%;
+        padding: 22px 24px;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 12px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 75px;
+      }
+      .cta-primary {
+        background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 100%);
+        color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+      .cta-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      }
+      .cta-primary::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transform: translateX(-100%);
+        transition: transform 0.6s;
+      }
+      .cta-primary:hover::before {
+        transform: translateX(100%);
+      }
+      .cta-secondary {
+        background: #fff;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+      .cta-secondary:hover {
+        background: var(--primary);
+        color: #fff;
+      }
+      .btn-subtitle {
+        font-size: 12px;
+        font-weight: 500;
+        opacity: 0.8;
+        margin-top: 4px;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+
+      /* Feature Highlights */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 16px;
+        background: #fff;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        transition: all 0.3s ease;
+      }
+      .feature-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(114, 47, 55, 0.1);
+      }
+      .feature-icon {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--accent-light) 100%
+        );
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+
+      /* Trust Bar */
+      .trust-bar {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding: 16px;
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+      }
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-soft);
+      }
+      .trust-item svg {
+        width: 18px;
+        height: 18px;
+        color: var(--success);
+      }
+
+      /* Sections */
+      .section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-title {
+        font-size: clamp(28px, 4vw, 40px);
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .section-subtitle {
+        text-align: center;
+        color: var(--text-soft);
+        font-size: 16px;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* The Difference Section */
+      .difference-section {
+        background: #fff;
+        padding: 80px 20px;
+      }
+      .difference-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .difference-card {
+        text-align: center;
+        padding: 32px 24px;
+        border-radius: 16px;
+        background: var(--cream);
+        transition: all 0.3s ease;
+      }
+      .difference-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(114, 47, 55, 0.1);
+      }
+      .difference-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, var(--primary) 0%, #333 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+      }
+      .difference-card h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        font-family: "Cormorant Garamond", serif;
+      }
+      .difference-card p {
+        color: var(--text-soft);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* Testimonials */
+      .testimonials-section {
+        background: var(--cream);
+        padding: 80px 20px;
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .testimonial-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 32px rgba(114, 47, 55, 0.1);
+      }
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent);
+      }
+      .testimonial-info h4 {
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+      .testimonial-info span {
+        font-size: 12px;
+        color: var(--text-soft);
+      }
+      .testimonial-stars {
+        margin-left: auto;
+        color: #f59e0b;
+        font-size: 14px;
+      }
+      .testimonial-text {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #333;
+        flex: 1;
+      }
+      .testimonial-image {
+        margin-top: 16px;
+        border-radius: 12px;
+        width: 100%;
+        aspect-ratio: 4/5;
+        object-fit: cover;
+      }
+      .testimonial-date {
+        margin-top: 12px;
+        font-size: 11px;
+        color: var(--warm-gray);
+        text-align: right;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        background: #fff;
+        padding: 80px 20px;
+      }
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--border);
+        padding: 24px 0;
+      }
+      .faq-question {
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: color 0.2s;
+      }
+      .faq-question:hover {
+        color: var(--accent);
+      }
+      .faq-question::after {
+        content: "+";
+        font-size: 24px;
+        font-weight: 300;
+        transition: transform 0.3s;
+      }
+      .faq-item.open .faq-question::after {
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.3s ease,
+          padding 0.3s ease;
+      }
+      .faq-item.open .faq-answer {
+        max-height: 500px;
+        padding-top: 16px;
+      }
+      .faq-answer p {
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      /* Order Bump Popup */
+      #orderBumpPopup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 10000;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow-y: auto;
+        backdrop-filter: blur(4px);
+      }
+      .popup-content {
+        background: #fff;
+        border-radius: 20px;
+        max-width: 550px;
+        width: 100%;
+        padding: 40px;
+        position: relative;
+        animation: floatUp 0.4s ease;
+      }
+      .popup-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #999;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .popup-badge {
+        background: var(--accent);
+        color: #fff;
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 24px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .popup-title {
+        font-size: 26px;
+        margin-bottom: 12px;
+        font-family: "Cormorant Garamond", serif;
+      }
+      .popup-subtitle {
+        color: var(--text-soft);
+        margin-bottom: 28px;
+      }
+      .bundle-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .bundle-item {
+        text-align: center;
+        padding: 16px 12px;
+        background: var(--cream);
+        border-radius: 12px;
+      }
+      .bundle-item img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 0 auto 10px;
+        border: 2px solid var(--border);
+      }
+      .bundle-item h4 {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        font-family: "Inter", sans-serif;
+      }
+      .bundle-item p {
+        font-size: 10px;
+        color: var(--text-soft);
+      }
+      .value-display {
+        text-align: center;
+        padding: 20px;
+        background: var(--cream);
+        border-radius: 12px;
+        margin-bottom: 24px;
+        border: 2px dashed var(--success);
+      }
+      .value-original {
+        font-size: 14px;
+        color: var(--text-soft);
+        text-decoration: line-through;
+      }
+      .value-price {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--success);
+      }
+      .popup-cta {
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(135deg, var(--success) 0%, #1e4d3a 100%);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-size: 17px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 12px;
+        transition: all 0.3s;
+      }
+      .popup-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(45, 106, 79, 0.4);
+      }
+      .popup-decline {
+        width: 100%;
+        padding: 14px;
+        background: transparent;
+        color: var(--text-soft);
+        border: none;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      /* Sticky Mobile CTA */
+      .sticky-mobile {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 16px 20px;
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+        display: none;
+        border-top: 2px solid var(--primary);
+      }
+      .sticky-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .sticky-price-block .sticky-price {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .sticky-price-block .sticky-old {
+        font-size: 14px;
+        color: var(--warm-gray);
+        text-decoration: line-through;
+        margin-left: 8px;
+      }
+      .sticky-cta-btn {
+        flex: 1;
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 16px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      /* Exit Transition */
+      .exit-transition {
+        position: fixed;
+        inset: 0;
+        background: #fff;
+        z-index: 999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      .exit-transition.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .exit-content {
+        text-align: center;
+        animation: floatUp 0.4s ease;
+      }
+      .exit-spinner {
+        width: 48px;
+        height: 48px;
+        border: 3px solid var(--border);
+        border-top-color: var(--primary);
+        border-radius: 50%;
+        margin: 0 auto 24px;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .exit-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .exit-subtitle {
+        color: var(--text-soft);
+        font-size: 14px;
+      }
+
+      /* Sold Out Notification */
+      .soldout-notification {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-120px);
+        background: var(--accent);
+        color: #fff;
+        padding: 18px 28px;
+        border-radius: 14px;
+        font-weight: 700;
+        font-size: 15px;
+        box-shadow: 0 8px 32px rgba(114, 47, 55, 0.4);
+        z-index: 9999;
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .soldout-notification.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      /* As Seen In Section */
+      .press-section {
+        background: #fff;
+        padding: 30px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+      .press-logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        opacity: 0.6;
+      }
+      .press-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--primary);
+      }
+      .press-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--warm-gray);
+        text-align: center;
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+
+      /* Problem Section */
+      .problem-section {
+        background: var(--primary);
+        color: #fff;
+        padding: 80px 20px;
+      }
+      .problem-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: center;
+      }
+      .problem-content h2 {
+        font-size: clamp(28px, 4vw, 38px);
+        margin-bottom: 24px;
+        color: #fff;
+      }
+      .problem-list {
+        list-style: none;
+      }
+      .problem-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .problem-list li::before {
+        content: "✕";
+        color: var(--accent-light);
+        font-weight: 700;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+      .solution-highlight {
+        background: rgba(114, 47, 55, 0.3);
+        border-left: 4px solid var(--accent-light);
+        padding: 20px 24px;
+        margin-top: 24px;
+        border-radius: 0 12px 12px 0;
+      }
+      .solution-highlight p {
+        font-size: 16px;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      /* Founder Story */
+      .founder-section {
+        background: var(--cream);
+        padding: 80px 20px;
+      }
+      .founder-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 50px;
+        max-width: 1000px;
+        margin: 0 auto;
+        align-items: center;
+      }
+      .founder-image {
+        width: 100%;
+        border-radius: 20px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      }
+      .founder-content h2 {
+        font-size: clamp(26px, 3.5vw, 34px);
+        margin-bottom: 20px;
+        color: var(--primary);
+      }
+      .founder-content p {
+        font-size: 15px;
+        line-height: 1.8;
+        color: var(--text-soft);
+        margin-bottom: 16px;
+      }
+      .founder-signature {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+        font-style: italic;
+        color: var(--accent);
+        margin-top: 20px;
+      }
+
+      /* How It Works */
+      .howitworks-section {
+        background: #fff;
+        padding: 80px 20px;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .step-card {
+        text-align: center;
+        padding: 32px 20px;
+        position: relative;
+      }
+      .step-card:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        right: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: var(--accent);
+        opacity: 0.5;
+      }
+      .step-number {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--accent-light) 100%
+        );
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 auto 20px;
+      }
+      .step-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+      }
+      .step-card p {
+        font-size: 13px;
+        color: var(--text-soft);
+        line-height: 1.6;
+      }
+
+      /* Delivery Timeline */
+      .delivery-timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, #f8f7f5 0%, #fff 100%);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin: 20px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .delivery-timeline::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        right: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--success), var(--accent));
+        transform: translateY(-50%);
+        border-radius: 2px;
+      }
+      .timeline-step {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .timeline-icon {
+        width: 44px;
+        height: 44px;
+        background: #fff;
+        border: 3px solid var(--success);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 8px;
+        font-size: 18px;
+      }
+      .timeline-step span {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text-soft);
+      }
+
+      /* Size Inclusive Section */
+      .inclusive-section {
+        background: linear-gradient(135deg, var(--accent) 0%, #5a252c 100%);
+        color: #fff;
+        padding: 80px 20px;
+        text-align: center;
+      }
+      .inclusive-section h2 {
+        font-size: clamp(28px, 4vw, 40px);
+        margin-bottom: 16px;
+        color: #fff;
+      }
+      .inclusive-section p {
+        font-size: 17px;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto 32px;
+        line-height: 1.7;
+      }
+      .size-showcase {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+      .size-pill {
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .size-pill.highlight {
+        background: #fff;
+        color: var(--accent);
+      }
+
+      /* Use Cases Section */
+      .usecases-section {
+        background: var(--cream);
+        padding: 80px 20px;
+      }
+      .usecases-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .usecase-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 28px 24px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+      .usecase-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--accent);
+        box-shadow: 0 16px 40px rgba(114, 47, 55, 0.12);
+      }
+      .usecase-icon {
+        font-size: 40px;
+        margin-bottom: 16px;
+      }
+      .usecase-card h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+      }
+      .usecase-card p {
+        font-size: 13px;
+        color: var(--text-soft);
+        line-height: 1.6;
+      }
+
+      /* Guarantee Section */
+      .guarantee-section {
+        background: #fff;
+        padding: 80px 20px;
+        text-align: center;
+      }
+      .guarantee-badge {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, var(--success) 0%, #1e4d3a 100%);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 28px;
+        color: #fff;
+        box-shadow: 0 12px 40px rgba(45, 106, 79, 0.3);
+      }
+      .guarantee-badge span:first-child {
+        font-size: 32px;
+        font-weight: 800;
+      }
+      .guarantee-badge span:last-child {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .guarantee-section h2 {
+        font-size: clamp(26px, 3.5vw, 36px);
+        margin-bottom: 16px;
+      }
+      .guarantee-section p {
+        font-size: 16px;
+        color: var(--text-soft);
+        max-width: 500px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* Comparison Section */
+      .comparison-section {
+        background: #fff;
+        padding: 80px 20px;
+      }
+      .comparison-table {
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+      }
+      .comparison-header {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        background: var(--primary);
+        color: #fff;
+        padding: 20px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .comparison-header span:first-child {
+        text-align: left;
+      }
+      .comparison-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border);
+        align-items: center;
+      }
+      .comparison-row:nth-child(even) {
+        background: #faf9f7;
+      }
+      .comparison-row span {
+        text-align: center;
+        font-size: 14px;
+      }
+      .comparison-row span:first-child {
+        text-align: left;
+        font-weight: 500;
+      }
+      .check-yes {
+        color: var(--success);
+        font-size: 20px;
+      }
+      .check-no {
+        color: #dc3545;
+        font-size: 20px;
+      }
+      .comparison-cell {
+        text-align: center;
+        font-size: 14px;
+        padding: 4px 8px;
+      }
+      .header-label {
+        text-align: left !important;
+        font-weight: 700;
+      }
+      .header-them,
+      .header-us {
+        font-weight: 600;
+        font-size: 13px;
+      }
+      .header-us {
+        color: var(--success);
+      }
+      .row-label {
+        text-align: left !important;
+        font-weight: 600;
+      }
+      .them-cell {
+        color: var(--text-soft);
+        font-size: 13px;
+      }
+      .us-cell {
+        color: var(--success);
+        font-weight: 600;
+        font-size: 13px;
+      }
+
+      /* Delivery Section Full Width */
+      .delivery-section {
+        background: linear-gradient(135deg, #f8f7f5 0%, #fff 100%);
+        padding: 60px 20px;
+      }
+      .delivery-section .delivery-timeline {
+        max-width: 900px;
+        margin: 0 auto;
+        background: transparent;
+        padding: 40px 0;
+      }
+      .delivery-section .delivery-timeline::before {
+        left: 80px;
+        right: 80px;
+      }
+      .delivery-step {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        flex: 1;
+      }
+      .delivery-icon {
+        width: 56px;
+        height: 56px;
+        background: #fff;
+        border: 3px solid var(--success);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 12px;
+        font-size: 24px;
+        box-shadow: 0 4px 15px rgba(45, 106, 79, 0.15);
+      }
+      .delivery-step.active .delivery-icon {
+        background: var(--success);
+        border-color: var(--success);
+      }
+      .delivery-info h4 {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: var(--text);
+      }
+      .delivery-info p {
+        font-size: 12px;
+        color: var(--text-soft);
+      }
+      .delivery-time {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--success);
+        margin-top: 8px;
+      }
+      .timeline-connector {
+        flex: 0.5;
+        height: 3px;
+        background: linear-gradient(90deg, var(--success), var(--accent));
+        margin: 0 -10px;
+        position: relative;
+        top: -30px;
+      }
+
+      /* Inclusive Section Enhanced */
+      .inclusive-content {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .inclusive-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        opacity: 0.8;
+        margin-bottom: 16px;
+      }
+      .inclusive-title {
+        font-size: clamp(42px, 6vw, 72px);
+        font-weight: 700;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+      }
+      .inclusive-subtitle {
+        font-size: 18px;
+        opacity: 0.9;
+        margin-bottom: 40px;
+      }
+      .size-range-display {
+        margin-bottom: 40px;
+      }
+      .size-range-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .size-range-bar {
+        width: 200px;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.3),
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.3)
+        );
+        border-radius: 2px;
+      }
+      .inclusive-stats {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+      }
+      .stat-item {
+        text-align: center;
+      }
+      .stat-number {
+        display: block;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .stat-label {
+        font-size: 13px;
+        opacity: 0.8;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Guarantee Section Enhanced */
+      .guarantee-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .guarantee-title {
+        font-size: clamp(26px, 3.5vw, 36px);
+        margin-bottom: 16px;
+      }
+      .guarantee-text {
+        font-size: 16px;
+        color: var(--text-soft);
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+      .guarantee-features {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      .guarantee-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .guarantee-check {
+        color: var(--success);
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--primary);
+        color: #fff;
+        padding: 60px 20px 30px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto 40px;
+      }
+      .footer-section h4 {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-light);
+      }
+      .footer-section p,
+      .footer-section a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        line-height: 1.8;
+        text-decoration: none;
+        display: block;
+      }
+      .footer-section a:hover {
+        color: #fff;
+      }
+      .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 900px) {
+        .product-hero {
+          grid-template-columns: 1fr;
+          gap: 32px;
+          padding: 30px 16px;
+        }
+        .gallery {
+          position: static;
+        }
+        .difference-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+      @media (max-width: 768px) {
+        .size-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+        .sticky-mobile {
+          display: block;
+        }
+        body {
+          padding-bottom: 90px;
+        }
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+        .bundle-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+        .popup-content {
+          padding: 28px 20px;
+        }
+        .announcement {
+          font-size: 12px;
+          padding: 12px 16px;
+        }
+      }
+      @media (max-width: 480px) {
+        .size-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .trust-bar {
+          gap: 12px;
+        }
+        .trust-item {
+          font-size: 10px;
+        }
+      }
+      @media (max-width: 900px) {
+        .problem-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .founder-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .steps-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .step-card:not(:last-child)::after {
+          display: none;
+        }
+        .usecases-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .comparison-header,
+        .comparison-row {
+          grid-template-columns: 1.5fr 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .press-logos {
+          gap: 24px;
+        }
+        .press-logo {
+          font-size: 16px;
+        }
+        .delivery-timeline {
+          flex-direction: column;
+          gap: 16px;
+          padding: 24px 20px;
+        }
+        .delivery-timeline::before {
+          display: none;
+        }
+        .steps-grid {
+          grid-template-columns: 1fr;
+        }
+        .usecases-grid {
+          grid-template-columns: 1fr;
+        }
+        .size-showcase {
+          gap: 8px;
+        }
+        .size-pill {
+          padding: 8px 14px;
+          font-size: 12px;
+        }
+        .comparison-header,
+        .comparison-row {
+          grid-template-columns: 1fr 1fr 1fr;
+          font-size: 12px;
+        }
+        .comparison-header {
+          padding: 14px;
+        }
+        .comparison-row {
+          padding: 12px 14px;
+        }
+        .timeline-connector {
+          display: none;
+        }
+        .delivery-step {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          text-align: left;
+          padding: 12px 0;
+          border-bottom: 1px solid var(--border);
+        }
+        .delivery-step:last-child {
+          border-bottom: none;
+        }
+        .delivery-icon {
+          width: 48px;
+          height: 48px;
+          margin: 0;
+          flex-shrink: 0;
+        }
+        .delivery-info {
+          flex: 1;
+        }
+        .delivery-time {
+          margin-top: 0;
+        }
+        .inclusive-stats {
+          gap: 30px;
+        }
+        .stat-number {
+          font-size: 28px;
+        }
+        .guarantee-features {
+          flex-direction: column;
+          gap: 16px;
+          align-items: center;
+        }
+        .founder-image {
+          order: 2;
+        }
+        .founder-content {
+          order: 1;
+        }
+        .founder-title {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sold Out Notification -->
+    <div id="soldoutNotification" class="soldout-notification">
+      <svg
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 8v4M12 16h.01" />
+      </svg>
+      <span>XS just sold out!</span>
+    </div>
+
+    <!-- Exit Transition -->
+    <div id="exitTransition" class="exit-transition">
+      <div class="exit-content">
+        <div class="exit-spinner"></div>
+        <p class="exit-title">Connecting to secure checkout...</p>
+        <p class="exit-subtitle">Please wait, do not close this page</p>
+      </div>
+    </div>
+
+    <!-- Order Bump Popup -->
+    <div id="orderBumpPopup">
+      <div class="popup-content">
+        <button class="popup-close" onclick="closeOrderBumpPopup()">
+          &times;
+        </button>
+        <div style="text-align: center">
+          <span class="popup-badge">One Time Offer</span>
+          <h2 class="popup-title">complete the calm?</h2>
+          <p class="popup-subtitle">
+            you're about to have THE bodysuit.<br />but the vibe isn't complete
+            without these.
+          </p>
+        </div>
+
+        <div class="bundle-grid">
+          <div class="bundle-item">
+            <img src="./images/order-bump/item1.jpg" alt="Nipple Covers" />
+            <h4>silicone covers</h4>
+            <p>invisible confidence</p>
+          </div>
+          <div class="bundle-item">
+            <img src="./images/order-bump/item2.jpg" alt="Calming Rollerball" />
+            <h4>calm rollerball</h4>
+            <p>instant zen</p>
+          </div>
+          <div class="bundle-item">
+            <img src="./images/order-bump/item3.jpg" alt="Gold Hoops" />
+            <h4>mini hoops</h4>
+            <p>the finishing touch</p>
+          </div>
+        </div>
+
+        <div class="value-display">
+          <div class="value-original">normally $89 if bought separate</div>
+          <div class="value-price">add all 3 for $10</div>
+        </div>
+
+        <button class="popup-cta" onclick="acceptOrderBump()">
+          yes i want the complete vibe - $10
+        </button>
+        <button class="popup-decline" onclick="declineOrderBump()">
+          no thanks, just the bodysuit
+        </button>
+      </div>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+      <span>FREE SHIPPING</span> on all orders &nbsp;|&nbsp; The bodysuit that
+      <span>hugs you back</span> &nbsp;|&nbsp; 30-day returns
+    </div>
+
+    <!-- As Seen In -->
+    <section class="press-section">
+      <p class="press-label">As Featured In</p>
+      <div class="press-logos">
+        <span class="press-logo">Vogue</span>
+        <span class="press-logo">Elle</span>
+        <span class="press-logo">Refinery29</span>
+        <span class="press-logo">Who What Wear</span>
+        <span class="press-logo">Byrdie</span>
+      </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-section">
+      <div class="section">
+        <div class="problem-grid">
+          <div class="problems-list">
+            <h2 class="problem-title">Sound Familiar?</h2>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>Shapewear that squeezes so tight you can't breathe</span>
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>That anxious, restless feeling that won't go away</span>
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span
+                >Compression that flattens your curves instead of lifting</span
+              >
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>Getting overheated in traditional shapewear</span>
+            </div>
+            <div class="problem-item">
+              <span class="problem-x">✕</span>
+              <span>Uncomfortable snaps that dig into your skin</span>
+            </div>
+          </div>
+          <div class="solution-box">
+            <h3>There's a Better Way</h3>
+            <p>
+              What if your bodysuit could actually <em>calm</em> your nervous
+              system? Variable-tension zones that <em>hug</em> you gently.
+              Graphene fabric that breathes. Magnetic closures you can't feel.
+              This isn't shapewear. It's wearable wellness.
+            </p>
+            <div class="solution-highlight">
+              <span class="check-icon">✓</span>
+              Engineered for emotional regulation, not just figure control
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="product-hero">
+        <!-- Gallery -->
+        <div class="gallery">
+          <img
+            class="main-img"
+            id="heroImage"
+            src="./images/product/photo_001 (1).jpg"
+            alt="Aura-Sculpt Anti-Anxiety Bodysuit - Deep Obsidian"
+          />
+          <div class="thumbs" id="thumbs"></div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <h1>Aura-Sculpt Bodysuit</h1>
+          <p class="tagline">
+            The bodysuit that <em>hugs you back</em>. Finally, shapewear that
+            feels like a weighted blanket you can wear to dinner.
+            Variable-tension zones hold you gently - <em>not squeeze</em>.
+          </p>
+
+          <!-- Social Proof -->
+          <div class="social-proof">
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-text">4.9 (2,847 reviews)</span>
+            </div>
+            <div class="live-viewers">
+              <span class="pulse-dot"></span>
+              <span id="viewerCount">127</span> viewing now
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="price-box">
+            <span class="price">$59</span>
+            <span class="old-price">$148</span>
+            <span class="badge">60% OFF</span>
+          </div>
+
+          <!-- Urgency Timer -->
+          <div class="urgency-timer">
+            <span class="timer-label">Sale ends in:</span>
+            <div class="timer-digits">
+              <span class="timer-box" id="hours">02</span>
+              <span style="font-weight: 700">:</span>
+              <span class="timer-box" id="minutes">47</span>
+              <span style="font-weight: 700">:</span>
+              <span class="timer-box" id="seconds">33</span>
+            </div>
+          </div>
+
+          <!-- Size Selector - Extended Range -->
+          <div class="size-section">
+            <div class="size-label">
+              Size <span class="size-guide-link">Size Guide</span>
+            </div>
+            <div class="size-grid">
+              <button class="size-btn" disabled>XXXS</button>
+              <button class="size-btn" disabled>XXS</button>
+              <button class="size-btn" onclick="selectSize(this, 'XS')">
+                XS
+              </button>
+              <button class="size-btn" onclick="selectSize(this, 'S')">
+                S
+              </button>
+              <button class="size-btn selected" onclick="selectSize(this, 'M')">
+                M
+              </button>
+              <button class="size-btn" onclick="selectSize(this, 'L')">
+                L
+              </button>
+              <button class="size-btn" onclick="selectSize(this, 'XL')">
+                XL
+              </button>
+              <button class="size-btn" onclick="selectSize(this, '1X')">
+                1X
+              </button>
+              <button class="size-btn" onclick="selectSize(this, '2X')">
+                2X
+              </button>
+              <button class="size-btn" onclick="selectSize(this, '3X')">
+                3X
+              </button>
+              <button class="size-btn" onclick="selectSize(this, '4X')">
+                4X
+              </button>
+              <button class="size-btn" disabled>5X</button>
+              <button class="size-btn" onclick="selectSize(this, '6X')">
+                6X
+              </button>
+              <button class="size-btn" disabled>7X</button>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="cta-section">
+            <button
+              class="cta-btn cta-primary"
+              onclick="handleAddToCart('order')"
+            >
+              Order Today - $59
+              <span class="btn-subtitle"
+                >Free express shipping + instant access</span
+              >
+            </button>
+            <button
+              class="cta-btn cta-secondary"
+              onclick="handleAddToCart('preorder')"
+            >
+              Pre-Order - $19
+              <span class="btn-subtitle"
+                >Reserve yours • Pay balance on ship</span
+              >
+            </button>
+          </div>
+
+          <!-- Features -->
+          <div class="features-grid">
+            <div class="feature-item">
+              <span class="feature-icon">🤗</span>
+              <span>Gentle hug, not squeeze</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🌡️</span>
+              <span>Graphene thermal regulation</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🧲</span>
+              <span>Zero-trace magnetic closure</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🍑</span>
+              <span>Lifts, never flattens</span>
+            </div>
+          </div>
+
+          <!-- Trust Bar -->
+          <div class="trust-bar">
+            <div class="trust-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+              Secure Checkout
+            </div>
+            <div class="trust-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              30-Day Returns
+            </div>
+            <div class="trust-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+              Ships in 24hrs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Difference Section -->
+    <section class="difference-section">
+      <div class="section">
+        <h2 class="section-title">Not Compression. Connection.</h2>
+        <p class="section-subtitle">
+          Other shapewear squeezes you into submission. We designed something
+          that holds you like you matter.
+        </p>
+
+        <div class="difference-grid">
+          <div class="difference-card">
+            <div class="difference-icon">🧠</div>
+            <h3>Zone Intelligence</h3>
+            <p>
+              Variable-tension 3D knitting. Breathable at chest, supportive at
+              waist, lifting at glutes. Your body isn't one-size - neither is
+              our compression.
+            </p>
+          </div>
+          <div class="difference-card">
+            <div class="difference-icon">💆</div>
+            <h3>Proprioceptive Calm</h3>
+            <p>
+              Like a weighted blanket for your nervous system. Graduated
+              compression stimulates your parasympathetic response. Feel held,
+              feel safe, feel grounded.
+            </p>
+          </div>
+          <div class="difference-card">
+            <div class="difference-icon">🌡️</div>
+            <h3>Thermal Regulation</h3>
+            <p>
+              Graphene-infused fabric redistributes body heat. Never sweaty,
+              never freezing. Your internal thermostat, externally managed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="howitworks-section">
+      <div class="section">
+        <h2 class="section-title">The Science of Calm</h2>
+        <p class="section-subtitle">
+          Four innovations working together to regulate your nervous system
+        </p>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">🎯</div>
+            <h3>Zone Intelligence</h3>
+            <p>
+              3D-knit variable tension. Breathable at chest, supportive at
+              waist, lifting at glutes. Each zone is calibrated differently.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">🧠</div>
+            <h3>Proprioceptive Signal</h3>
+            <p>
+              Gentle, graduated pressure signals your parasympathetic nervous
+              system. Like a weighted blanket for your whole body.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">🌡️</div>
+            <h3>Thermal Regulation</h3>
+            <p>
+              Graphene-infused fabric redistributes body heat. Never sweaty,
+              never cold. Your temperature, perfectly managed.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-icon">✨</div>
+            <h3>Magnetic Seal</h3>
+            <p>
+              Micro-magnetic glide tracks replace bulky snaps. Thinner than
+              paper. Zero visible lines under any outfit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Story Section -->
+    <section class="founder-section">
+      <div class="section">
+        <div class="founder-grid">
+          <div class="founder-image">
+            <div class="founder-placeholder">
+              <span>Founder Photo</span>
+            </div>
+          </div>
+          <div class="founder-content">
+            <p class="founder-label">FROM THE FOUNDER</p>
+            <h2 class="founder-title">
+              "I created this because I was tired of shapewear that felt like
+              punishment."
+            </h2>
+            <div class="founder-story">
+              <p>
+                Hi, I'm Maya. I've struggled with anxiety my whole life. When I
+                discovered that weighted blankets helped calm my nervous system,
+                I wondered... why can't my clothes do that too?
+              </p>
+              <p>
+                Traditional shapewear made my anxiety <em>worse</em>. The
+                squeezing, the restriction, the overheating. I couldn't breathe.
+                So I spent three years developing something different.
+              </p>
+              <p>
+                Aura-Sculpt isn't about squeezing yourself smaller. It's about
+                feeling <em>held</em>. Supported. Like someone's giving you a
+                gentle, constant hug. That's what calm feels like.
+              </p>
+            </div>
+            <div class="founder-signature">
+              <span class="signature">Maya Chen</span>
+              <span class="title">Founder & Designer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Size Inclusivity Section -->
+    <section class="inclusive-section">
+      <div class="section">
+        <div class="inclusive-content">
+          <p class="inclusive-label">EVERY BODY DESERVES CALM</p>
+          <h2 class="inclusive-title">XXXS to 7X</h2>
+          <p class="inclusive-subtitle">
+            18 sizes. One promise: the same gentle hug, no matter your body.
+          </p>
+
+          <div class="size-range-display">
+            <div class="size-range-item">
+              <span class="size-label">XXXS</span>
+              <span class="size-range-bar"></span>
+              <span class="size-label">7X</span>
+            </div>
+          </div>
+
+          <div class="inclusive-stats">
+            <div class="stat-item">
+              <span class="stat-number">18</span>
+              <span class="stat-label">Sizes Available</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">97%</span>
+              <span class="stat-label">True-to-Size Fit</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24hr</span>
+              <span class="stat-label">Made to Order</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="usecases-section">
+      <div class="section">
+        <h2 class="section-title">Wear Your Calm Everywhere</h2>
+        <p class="section-subtitle">
+          From first dates to board meetings, we've got you held
+        </p>
+
+        <div class="usecases-grid">
+          <div class="usecase-card">
+            <div class="usecase-icon">🍷</div>
+            <h3>Date Night</h3>
+            <p>
+              Confidence without the squeeze. Look incredible, feel even better.
+            </p>
+          </div>
+          <div class="usecase-card">
+            <div class="usecase-icon">💼</div>
+            <h3>Work Events</h3>
+            <p>
+              Professional polish with invisible support. No fidgeting, no
+              discomfort.
+            </p>
+          </div>
+          <div class="usecase-card">
+            <div class="usecase-icon">✈️</div>
+            <h3>Travel Days</h3>
+            <p>
+              Thermal regulation keeps you comfortable on long flights. Arrive
+              calm.
+            </p>
+          </div>
+          <div class="usecase-card">
+            <div class="usecase-icon">🎉</div>
+            <h3>Big Events</h3>
+            <p>
+              All-day (and all-night) comfort. Dance until dawn without rolling
+              or shifting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="comparison-section">
+      <div class="section">
+        <h2 class="section-title">The Aura-Sculpt Difference</h2>
+        <p class="section-subtitle">We're not just another shapewear brand</p>
+
+        <div class="comparison-table">
+          <div class="comparison-header">
+            <div class="comparison-cell header-label">Feature</div>
+            <div class="comparison-cell header-them">Traditional Shapewear</div>
+            <div class="comparison-cell header-us">Aura-Sculpt</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-cell row-label">Compression Type</div>
+            <div class="comparison-cell them-cell">
+              Uniform squeeze everywhere
+            </div>
+            <div class="comparison-cell us-cell">Variable-tension zones ✓</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-cell row-label">Comfort Level</div>
+            <div class="comparison-cell them-cell">
+              Can't breathe, restrictive
+            </div>
+            <div class="comparison-cell us-cell">Like a gentle hug ✓</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-cell row-label">Temperature</div>
+            <div class="comparison-cell them-cell">Overheating, sweating</div>
+            <div class="comparison-cell us-cell">
+              Graphene thermal regulation ✓
+            </div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-cell row-label">Closures</div>
+            <div class="comparison-cell them-cell">
+              Bulky snaps, visible lines
+            </div>
+            <div class="comparison-cell us-cell">
+              Magnetic seal, invisible ✓
+            </div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-cell row-label">Emotional Benefit</div>
+            <div class="comparison-cell them-cell">Increases anxiety</div>
+            <div class="comparison-cell us-cell">Calms nervous system ✓</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-cell row-label">Size Range</div>
+            <div class="comparison-cell them-cell">Limited options</div>
+            <div class="comparison-cell us-cell">XXXS to 7X (18 sizes) ✓</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="section">
+        <h2 class="section-title">Real Girls. Real Calm.</h2>
+        <p class="section-subtitle">
+          Join thousands who've traded anxiety for aura.
+        </p>
+
+        <div class="testimonials-grid" id="testimonialsGrid">
+          <!-- Testimonials loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="section">
+        <h2 class="section-title">Questions? We've Got You.</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How is this different from regular shapewear?
+            </div>
+            <div class="faq-answer">
+              <p>
+                Traditional shapewear applies uniform compression everywhere -
+                that's why it feels like a torture device. Aura-Sculpt uses
+                variable-tension zones: gentle at the chest so you can breathe,
+                supportive at the waist for that held feeling, and lifting at
+                the glutes without flattening. It's engineered to feel like a
+                hug, not a squeeze.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What's the "anti-anxiety" aspect about?
+            </div>
+            <div class="faq-answer">
+              <p>
+                The graduated compression mimics proprioceptive feedback - the
+                same principle behind weighted blankets. This gentle, consistent
+                pressure signals your parasympathetic nervous system to calm
+                down. Many customers tell us they feel grounded and secure, not
+                just "snatched."
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What size should I order?
+            </div>
+            <div class="faq-answer">
+              <p>
+                We recommend ordering your normal clothing size. The
+                variable-tension zones adapt to your body. If you're between
+                sizes, size up for a gentler hug or size down for more support.
+                Our extended range goes from XXXS to 7X.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How does the magnetic closure work?
+            </div>
+            <div class="faq-answer">
+              <p>
+                Micro-magnetic glide tracks replace bulky snaps. The panels seal
+                automatically when they get close - no fumbling in dark
+                bathrooms. The closure is thinner than paper, so you get zero
+                visible lines even under bodycon dresses.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What's the return policy?
+            </div>
+            <div class="faq-answer">
+              <p>
+                30-day no-questions-asked returns. If you don't feel that "held"
+                sensation we promise, send it back. We'll refund everything
+                including shipping. Your nervous system deserves to be happy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+      <div class="section">
+        <div class="guarantee-content">
+          <div class="guarantee-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+              />
+            </svg>
+          </div>
+          <h2 class="guarantee-title">30-Day Calm Guarantee</h2>
+          <p class="guarantee-text">
+            If you don't feel that "held" sensation we promise within 30 days,
+            we'll give you a full refund. No questions asked. Your nervous
+            system deserves to be happy.
+          </p>
+          <div class="guarantee-features">
+            <div class="guarantee-item">
+              <span class="guarantee-check">✓</span>
+              <span>Free returns</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-check">✓</span>
+              <span>Full refund</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-check">✓</span>
+              <span>No questions asked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Timeline Section -->
+    <section class="delivery-section">
+      <div class="section">
+        <h2 class="section-title">From Our Studio to Your Door</h2>
+        <p class="section-subtitle">
+          Fast shipping, beautiful packaging, zero stress
+        </p>
+
+        <div class="delivery-timeline">
+          <div class="delivery-step">
+            <div class="delivery-icon">📦</div>
+            <div class="delivery-info">
+              <h4>Order Placed</h4>
+              <p>Secure checkout complete</p>
+            </div>
+            <div class="delivery-time">Today</div>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="delivery-step">
+            <div class="delivery-icon">✂️</div>
+            <div class="delivery-info">
+              <h4>Made to Order</h4>
+              <p>Cut & sewn for you</p>
+            </div>
+            <div class="delivery-time">24-48hrs</div>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="delivery-step">
+            <div class="delivery-icon">🚚</div>
+            <div class="delivery-info">
+              <h4>Shipped</h4>
+              <p>Express shipping</p>
+            </div>
+            <div class="delivery-time">2-5 days</div>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="delivery-step active">
+            <div class="delivery-icon">🏠</div>
+            <div class="delivery-info">
+              <h4>Delivered</h4>
+              <p>Ready to wear</p>
+            </div>
+            <div class="delivery-time">5-7 days</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>Aura-Sculpt</h4>
+          <p>
+            The bodysuit that hugs you back. Engineered for emotional regulation
+            through fashion.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns</a>
+          <a href="#">Size Guide</a>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Aura-Sculpt. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile" id="stickyCta">
+      <div class="sticky-row">
+        <div class="sticky-price-block">
+          <span class="sticky-price">$59</span>
+          <span class="sticky-old">$148</span>
+        </div>
+        <button class="sticky-cta-btn" onclick="handleAddToCart('order')">
+          ORDER NOW
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Product Images
+      const productImages = [
+        "./images/product/photo_001 (1).jpg",
+        "./images/product/photo_001 (2).jpg",
+        "./images/product/photo_002 (2).jpg",
+        "./images/product/photo_002 (3).jpg",
+        "./images/product/photo_003 (1).jpg",
+        "./images/product/Gemini_Generated_Image_ulk4iulk4iulk4iu (1) (1).png",
+        "./images/product/Gemini_Generated_Image_ulk4iulk4iulk4iu (2).png",
+      ];
+
+      // Testimonial Images
+      const testimonialImages = Array.from({ length: 30 }, (_, i) => {
+        const num = String(i + 1).padStart(3, "0");
+        return `photo_${num}`;
+      });
+
+      // State
+      let selectedSize = "M";
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", () => {
+        loadThumbnails();
+        loadTestimonials();
+        startTimer();
+        startViewerCount();
+        initStickyScroll();
+        scheduleXSSoldOut();
+      });
+
+      // Load Thumbnails
+      function loadThumbnails() {
+        const container = document.getElementById("thumbs");
+        productImages.forEach((src, i) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.className = "thumb" + (i === 0 ? " active" : "");
+          img.alt = `View ${i + 1}`;
+          img.onclick = () => switchImage(src, img);
+          container.appendChild(img);
+        });
+      }
+
+      // Switch Image
+      function switchImage(src, thumb) {
+        document.getElementById("heroImage").src = src;
+        document
+          .querySelectorAll(".thumb")
+          .forEach((t) => t.classList.remove("active"));
+        thumb.classList.add("active");
+      }
+
+      // Size Selection
+      function selectSize(btn, size) {
+        document
+          .querySelectorAll(".size-btn")
+          .forEach((b) => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        selectedSize = size;
+      }
+
+      // Timer
+      function startTimer() {
+        let time = 2 * 3600 + 47 * 60 + 33;
+        setInterval(() => {
+          time--;
+          if (time < 0) time = 3 * 3600;
+          const h = Math.floor(time / 3600);
+          const m = Math.floor((time % 3600) / 60);
+          const s = time % 60;
+          document.getElementById("hours").textContent = String(h).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("minutes").textContent = String(m).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("seconds").textContent = String(s).padStart(
+            2,
+            "0",
+          );
+        }, 1000);
+      }
+
+      // Viewer Count
+      function startViewerCount() {
+        setInterval(() => {
+          const count = 120 + Math.floor(Math.random() * 30);
+          document.getElementById("viewerCount").textContent = count;
+        }, 5000);
+      }
+
+      // Sticky CTA
+      function initStickyScroll() {
+        const sticky = document.getElementById("stickyCta");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 400 && window.innerWidth <= 768) {
+            sticky.style.display = "block";
+          } else {
+            sticky.style.display = "none";
+          }
+        });
+      }
+
+      // XS Sold Out after 45 seconds
+      function scheduleXSSoldOut() {
+        setTimeout(() => {
+          const xsBtn = document.querySelector(".size-btn:nth-child(3)");
+          if (xsBtn && !xsBtn.disabled) {
+            xsBtn.disabled = true;
+            xsBtn.onclick = null;
+            showSoldOutNotification("XS");
+          }
+        }, 45000);
+      }
+
+      function showSoldOutNotification(size) {
+        const notif = document.getElementById("soldoutNotification");
+        notif.querySelector("span").textContent = `${size} just sold out!`;
+        notif.classList.add("show");
+        setTimeout(() => notif.classList.remove("show"), 4000);
+      }
+
+      // FAQ Toggle
+      function toggleFaq(el) {
+        el.parentElement.classList.toggle("open");
+      }
+
+      // Add to Cart
+      function handleAddToCart(type) {
+        if (type === "preorder") {
+          showOrderBumpPopup();
+        } else {
+          processOrder(59);
+        }
+      }
+
+      // Order Bump
+      function showOrderBumpPopup() {
+        document.getElementById("orderBumpPopup").style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeOrderBumpPopup() {
+        document.getElementById("orderBumpPopup").style.display = "none";
+        document.body.style.overflow = "";
+      }
+
+      function acceptOrderBump() {
+        closeOrderBumpPopup();
+        processOrder(29);
+      }
+
+      function declineOrderBump() {
+        closeOrderBumpPopup();
+        processOrder(19);
+      }
+
+      // Process Order
+      async function processOrder(amount) {
+        try {
+          const r = await fetch("/.netlify/functions/buy-now", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ amountUSD: amount, size: selectedSize }),
+          });
+          const d = await r.json();
+          const url = d.exchangeUrl || d.url;
+          if (url) {
+            redirectWithTransition(url);
+          } else {
+            alert("Error processing order. Please try again.");
+          }
+        } catch (e) {
+          alert("Error processing order. Please try again.");
+        }
+      }
+
+      function redirectWithTransition(url) {
+        const overlay = document.getElementById("exitTransition");
+        overlay.classList.add("active");
+        setTimeout(() => (window.location.href = url), 600);
+      }
+
+      // Testimonials Data
+      const testimonials = [
+        {
+          name: "Maya K.",
+          platform: "tiktok",
+          text: "okay so i have ADHD and this bodysuit literally feels like a weighted blanket?? the gentle pressure actually helps me focus. obsessed 🖤",
+          rating: 5,
+          img: 0,
+        },
+        {
+          name: "Sophia R.",
+          platform: "instagram",
+          text: "finally found something that holds me without making me feel like i can't breathe. the zone compression is genius - tight where i want, loose where i need",
+          rating: 5,
+          img: 1,
+        },
+        {
+          name: "Aiden L.",
+          platform: "tiktok",
+          text: "bought this for my anxiety and honestly it's like a hug i can wear to dinner. the warmth from the graphene is so comforting in winter",
+          rating: 5,
+          img: 2,
+        },
+        {
+          name: "Chloe M.",
+          platform: "facebook",
+          text: "i was skeptical about 'anti-anxiety' shapewear but this genuinely calms my nervous system. wear it under everything now",
+          rating: 5,
+          img: 3,
+        },
+        {
+          name: "Emma W.",
+          platform: "instagram",
+          text: "the magnetic closure is a game changer!! no more fumbling with snaps in club bathrooms. literally zero visible lines under my bodycon",
+          rating: 5,
+          img: 4,
+        },
+        {
+          name: "Zoe P.",
+          platform: "tiktok",
+          text: "this doesn't squeeze like skims. it HOLDS you. like a gentle constant hug. my cortisol thanks me lol",
+          rating: 5,
+          img: 5,
+        },
+        {
+          name: "Lily T.",
+          platform: "google",
+          text: "As someone with sensory issues, most shapewear is torture. This actually feels good - the variable compression zones respect my body",
+          rating: 5,
+          img: 6,
+        },
+        {
+          name: "Ava J.",
+          platform: "instagram",
+          text: "the butt lift without the flatten is REAL. my curves stay curvy, just... lifted. and the thermal regulation means no more sweaty subway rides",
+          rating: 5,
+          img: 7,
+        },
+        {
+          name: "Mia D.",
+          platform: "tiktok",
+          text: "wore this to a 3-hour final exam and felt genuinely calmer?? the proprioceptive feedback thing is real. buying one for every girl i know",
+          rating: 5,
+          img: 8,
+        },
+        {
+          name: "Isabella N.",
+          platform: "facebook",
+          text: "finally shapewear that doesn't make me feel like i'm being punished for having a body. the gentle hug sensation is everything",
+          rating: 5,
+          img: 9,
+        },
+        {
+          name: "Olivia H.",
+          platform: "instagram",
+          text: "the thumbholes!!! such a small detail but they seal in the warmth perfectly. feels so luxe and considered",
+          rating: 5,
+          img: 10,
+        },
+        {
+          name: "Charlotte B.",
+          platform: "tiktok",
+          text: "my therapist asked what changed because i've been less anxious. it's literally this bodysuit. not joking.",
+          rating: 5,
+          img: 11,
+        },
+        {
+          name: "Amelia C.",
+          platform: "google",
+          text: "Got this for my daughter with autism - she says it feels like a portable calm. The sensory-friendly design is thoughtful",
+          rating: 5,
+          img: 12,
+        },
+        {
+          name: "Harper S.",
+          platform: "instagram",
+          text: "the deep obsidian color is SO chic. looks like a $400 designer piece from The Row but with actual body benefits",
+          rating: 5,
+          img: 13,
+        },
+        {
+          name: "Evelyn F.",
+          platform: "tiktok",
+          text: "i have ✨issues✨ with being touched but this feels safe?? the graduated compression is like being held on my own terms",
+          rating: 5,
+          img: 14,
+        },
+        {
+          name: "Abigail G.",
+          platform: "facebook",
+          text: "wore this under my wedding dress for 12 hours. NO sweating, no discomfort, just felt supported all day. worth every penny",
+          rating: 5,
+          img: 15,
+        },
+        {
+          name: "Emily V.",
+          platform: "instagram",
+          text: "the v-neck is architectural perfection. got 10/10 support without a bra and no digging. HOW",
+          rating: 5,
+          img: 16,
+        },
+        {
+          name: "Elizabeth A.",
+          platform: "tiktok",
+          text: "told my friends it's 'emotional shapewear' and they laughed until they tried it. now we all have matching ones lol",
+          rating: 5,
+          img: 17,
+        },
+        {
+          name: "Sofia Z.",
+          platform: "google",
+          text: "Quality is incredible for the price. The matte-liquid finish absorbs light beautifully - natural contouring without makeup",
+          rating: 4,
+          img: 18,
+        },
+        {
+          name: "Avery Q.",
+          platform: "instagram",
+          text: "the sizing chart was accurate!! got my normal M and it hugs perfectly. not too tight at chest, supportive at waist, lifting at back",
+          rating: 5,
+          img: 19,
+        },
+        {
+          name: "Ella X.",
+          platform: "tiktok",
+          text: "this is giving quiet luxury meets wellness brand meets 'i have my life together'. the vibe is immaculate",
+          rating: 5,
+          img: 20,
+        },
+        {
+          name: "Scarlett Y.",
+          platform: "facebook",
+          text: "bought the espresso color too after loving the obsidian. the rich moody tones are SO much better than basic beige shapewear",
+          rating: 5,
+          img: 21,
+        },
+        {
+          name: "Grace O.",
+          platform: "instagram",
+          text: "the thermal regulation is NO JOKE. went from heated restaurant to freezing outside and felt perfectly regulated both times",
+          rating: 5,
+          img: 22,
+        },
+        {
+          name: "Victoria I.",
+          platform: "tiktok",
+          text: "my weighted blanket is jealous bc i wear this more. the proprioceptive hug is portable comfort and i am LIVING",
+          rating: 5,
+          img: 23,
+        },
+        {
+          name: "Riley U.",
+          platform: "google",
+          text: "Pleasantly surprised by the range of sizes. Finally inclusive shapewear that actually fits larger bodies properly",
+          rating: 5,
+          img: 24,
+        },
+        {
+          name: "Aria E.",
+          platform: "instagram",
+          text: "okay the sleeves with thumbholes are genius for winter. pulse point heat seal + elongated silhouette = chef's kiss for photos",
+          rating: 5,
+          img: 25,
+        },
+        {
+          name: "Luna R.",
+          platform: "tiktok",
+          text: "this is the 'subversive basic' i've been searching for. looks effortlessly cool while doing heavy structural work underneath",
+          rating: 5,
+          img: 26,
+        },
+        {
+          name: "Zoey T.",
+          platform: "facebook",
+          text: "the sheer compression panels give the illusion of skin while still holding everything. genius design for cut-outs",
+          rating: 5,
+          img: 27,
+        },
+        {
+          name: "Nora L.",
+          platform: "instagram",
+          text: "returned my skims for this and zero regrets. the difference between being squeezed and being held is EVERYTHING",
+          rating: 5,
+          img: 28,
+        },
+        {
+          name: "Hazel M.",
+          platform: "tiktok",
+          text: "my secret weapon for surviving winter social life while looking effortlessly perfect. nobody knows but me 🤫",
+          rating: 5,
+          img: 29,
+        },
+      ];
+
+      // Load Testimonials
+      function loadTestimonials() {
+        const grid = document.getElementById("testimonialsGrid");
+        const files = [
+          "photo_001 (1).jpg",
+          "photo_001 (2).jpg",
+          "photo_002 (2).jpg",
+          "photo_002 (3).jpg",
+          "photo_003 (1).jpg",
+          "photo_003 (2).jpg",
+          "photo_004 (1).jpg",
+          "photo_004 (2).jpg",
+          "photo_005 (1).jpg",
+          "photo_005 (2).jpg",
+          "photo_005 (3).jpg",
+          "photo_006 (1).jpg",
+          "photo_006 (2).jpg",
+          "photo_006 (3).jpg",
+          "photo_007 (1).jpg",
+          "photo_007 (2).jpg",
+          "photo_007 (3).jpg",
+          "photo_007 (4).jpg",
+          "photo_008 (1).jpg",
+          "photo_008 (2).jpg",
+          "photo_009 (1).jpg",
+          "photo_009 (2).jpg",
+          "photo_010 (1).jpg",
+          "photo_010 (2).jpg",
+          "photo_011 (1).jpg",
+          "photo_011 (2).jpg",
+          "photo_012 (1).jpg",
+          "photo_012 (2).jpg",
+          "photo_013 (1).jpg",
+          "photo_013 (2).jpg",
+        ];
+
+        const platformColors = {
+          tiktok: "#000",
+          instagram: "#E4405F",
+          facebook: "#1877F2",
+          google: "#4285F4",
+        };
+
+        const dates = [
+          "2 days ago",
+          "3 days ago",
+          "1 week ago",
+          "2 weeks ago",
+          "3 weeks ago",
+          "1 month ago",
+        ];
+
+        testimonials.forEach((t, i) => {
+          const card = document.createElement("div");
+          card.className = "testimonial-card";
+          card.innerHTML = `
+      <div class="testimonial-header">
+        <div class="testimonial-info">
+          <h4>${t.name}</h4>
+          <span style="color:${platformColors[t.platform]}">${t.platform}</span>
+        </div>
+        <span class="testimonial-stars">${"★".repeat(t.rating)}</span>
+      </div>
+      <p class="testimonial-text">${t.text}</p>
+      ${files[i] ? `<img class="testimonial-image" src="./images/testimonials/${files[i]}" alt="${t.name}'s photo" loading="lazy">` : ""}
+      <span class="testimonial-date">${dates[i % dates.length]}</span>
+    `;
+          grid.appendChild(card);
+        });
+      }
+    </script>
+  </body>
+</html>
