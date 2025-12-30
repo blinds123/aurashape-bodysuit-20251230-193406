@@ -40,6 +40,23 @@
       rel="stylesheet"
     />
 
+    <!-- Hotjar Tracking Code -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 5407540, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+
     <style>
       /* Reset & Base */
       * {
@@ -71,20 +88,29 @@
         font-weight: 600;
       }
 
-      /* Color System - Deep Obsidian/Cherry/Espresso */
+      /* Color System - Calming Premium (Skims/Heist Inspired) */
       :root {
         --primary: #1a1a1a;
         --primary-rgb: 26, 26, 26;
-        --accent: #722f37;
-        --accent-light: #8b3a44;
-        --accent-rgb: 114, 47, 55;
-        --espresso: #4a332d;
-        --cream: #faf9f7;
-        --warm-gray: #9a918a;
+        --accent: #d4a5a5;
+        --accent-light: #e8c4c4;
+        --accent-dark: #b88888;
+        --accent-rgb: 212, 165, 165;
+        --gold: #c4a77d;
+        --gold-light: #d4bc9a;
+        --sage: #8b9e93;
+        --sage-light: #a8b8af;
+        --cream: #faf8f5;
+        --cream-dark: #f0ece7;
+        --warm-gray: #9a9590;
+        --charcoal: #2d2d2d;
         --text: #1a1a1a;
-        --text-soft: #666;
+        --text-soft: #4a4a4a;
+        --text-muted: #7a7a7a;
         --border: #e8e4df;
-        --success: #2d6a4f;
+        --success: #8b9e93;
+        --blush: #f5e6e6;
+        --blush-dark: #e8d4d4;
       }
 
       /* Premium Micro-Interactions */
@@ -129,10 +155,10 @@
       @keyframes softGlow {
         0%,
         100% {
-          box-shadow: 0 0 20px rgba(114, 47, 55, 0.2);
+          box-shadow: 0 0 20px rgba(212, 165, 165, 0.3);
         }
         50% {
-          box-shadow: 0 0 40px rgba(114, 47, 55, 0.4);
+          box-shadow: 0 0 40px rgba(212, 165, 165, 0.5);
         }
       }
       @keyframes slideInRight {
@@ -330,7 +356,7 @@
         align-items: center;
         gap: 12px;
         padding: 14px 20px;
-        background: linear-gradient(135deg, var(--accent) 0%, #5a252c 100%);
+        background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
         color: #fff;
         border-radius: 10px;
         margin-bottom: 20px;
@@ -394,7 +420,7 @@
       .size-btn:not(:disabled):hover {
         border-color: var(--accent);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(114, 47, 55, 0.15);
+        box-shadow: 0 4px 12px rgba(212, 165, 165, 0.25);
       }
       .size-btn.selected {
         background: var(--primary);
@@ -507,7 +533,7 @@
       }
       .feature-item:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(114, 47, 55, 0.1);
+        box-shadow: 0 4px 16px rgba(212, 165, 165, 0.15);
       }
       .feature-icon {
         width: 36px;
@@ -593,7 +619,7 @@
       }
       .difference-card:hover {
         transform: translateY(-8px);
-        box-shadow: 0 16px 40px rgba(114, 47, 55, 0.1);
+        box-shadow: 0 16px 40px rgba(212, 165, 165, 0.15);
       }
       .difference-icon {
         width: 80px;
@@ -640,7 +666,7 @@
       }
       .testimonial-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 32px rgba(114, 47, 55, 0.1);
+        box-shadow: 0 8px 32px rgba(212, 165, 165, 0.15);
       }
       .testimonial-header {
         display: flex;
@@ -970,7 +996,7 @@
         border-radius: 14px;
         font-weight: 700;
         font-size: 15px;
-        box-shadow: 0 8px 32px rgba(114, 47, 55, 0.4);
+        box-shadow: 0 8px 32px rgba(26, 26, 26, 0.3);
         z-index: 9999;
         opacity: 0;
         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -1015,55 +1041,178 @@
         font-weight: 600;
       }
 
-      /* Problem Section */
+      /* Problem Section - Premium Redesign */
       .problem-section {
-        background: var(--primary);
+        background: linear-gradient(
+          180deg,
+          var(--charcoal) 0%,
+          var(--primary) 100%
+        );
         color: #fff;
-        padding: 80px 20px;
+        padding: 100px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+      .problem-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            ellipse at 30% 20%,
+            rgba(201, 169, 110, 0.06) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 70% 80%,
+            rgba(139, 111, 92, 0.04) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
       }
       .problem-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 60px;
+        gap: 50px;
         max-width: 1100px;
         margin: 0 auto;
-        align-items: center;
+        align-items: start;
+        position: relative;
+        z-index: 1;
       }
-      .problem-content h2 {
+      .problems-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .problem-title {
+        font-family: "Cormorant Garamond", serif;
         font-size: clamp(28px, 4vw, 38px);
-        margin-bottom: 24px;
+        font-weight: 500;
         color: #fff;
+        margin-bottom: 28px;
+        letter-spacing: -0.02em;
       }
-      .problem-list {
-        list-style: none;
-      }
-      .problem-list li {
+      .problem-item {
         display: flex;
         align-items: flex-start;
-        gap: 12px;
-        margin-bottom: 16px;
-        font-size: 15px;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.85);
+        gap: 16px;
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        transition: all 0.3s ease;
       }
-      .problem-list li::before {
-        content: "✕";
-        color: var(--accent-light);
-        font-weight: 700;
-        font-size: 18px;
-        flex-shrink: 0;
+      .problem-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(201, 169, 110, 0.25);
+        transform: translateX(6px);
+      }
+      .problem-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgba(92, 46, 53, 0.9),
+          rgba(122, 61, 70, 0.7)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(92, 46, 53, 0.3);
+      }
+      .problem-icon svg {
+        width: 16px;
+        height: 16px;
+        stroke: #fff;
+        stroke-width: 2.5;
+      }
+      .problem-x {
+        display: none;
+      }
+      .problem-item span:last-child {
+        font-size: 15px;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.88);
+        padding-top: 6px;
+      }
+      .solution-box {
+        background: linear-gradient(
+          145deg,
+          rgba(201, 169, 110, 0.1),
+          rgba(201, 169, 110, 0.03)
+        );
+        border: 1px solid rgba(201, 169, 110, 0.2);
+        border-radius: 20px;
+        padding: 36px;
+        position: relative;
+      }
+      .solution-box::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 40px;
+        right: 40px;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+      .solution-box h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(24px, 3vw, 30px);
+        font-weight: 500;
+        color: var(--gold-light);
+        margin-bottom: 20px;
+        letter-spacing: -0.01em;
+      }
+      .solution-box p {
+        font-size: 15px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.78);
+        margin-bottom: 24px;
+      }
+      .solution-box em {
+        color: var(--gold-light);
+        font-style: normal;
+        font-weight: 500;
       }
       .solution-highlight {
-        background: rgba(114, 47, 55, 0.3);
-        border-left: 4px solid var(--accent-light);
-        padding: 20px 24px;
-        margin-top: 24px;
-        border-radius: 0 12px 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 20px;
+        background: rgba(92, 124, 107, 0.12);
+        border: 1px solid rgba(92, 124, 107, 0.25);
+        border-radius: 12px;
       }
-      .solution-highlight p {
-        font-size: 16px;
-        font-style: italic;
-        color: rgba(255, 255, 255, 0.95);
+      .check-icon {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--success), #4a6b5c);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(92, 124, 107, 0.25);
+      }
+      .solution-highlight span:last-child {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.92);
+        font-weight: 500;
+        line-height: 1.5;
       }
 
       /* Influencer / Worn by Favorites Section */
@@ -1090,7 +1239,7 @@
         object-fit: cover;
         margin: 0 auto 16px;
         border: 3px solid var(--accent-light);
-        box-shadow: 0 4px 20px rgba(114, 47, 55, 0.2);
+        box-shadow: 0 4px 20px rgba(212, 165, 165, 0.25);
       }
       .influencer-card h4 {
         font-family: "Inter", sans-serif;
@@ -1186,6 +1335,47 @@
         aspect-ratio: 1;
         object-fit: cover;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      }
+      .founder-placeholder {
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        background: linear-gradient(145deg, #722f37 0%, #3d1a1e 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .founder-placeholder::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.05) 0%,
+          transparent 60%
+        );
+        animation: subtle-shine 8s ease-in-out infinite;
+      }
+      @keyframes subtle-shine {
+        0%,
+        100% {
+          transform: translate(-30%, -30%);
+        }
+        50% {
+          transform: translate(30%, 30%);
+        }
+      }
+      .founder-placeholder .founder-initials {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(80px, 15vw, 140px);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.15);
+        letter-spacing: 0.1em;
+        z-index: 1;
       }
       .founder-content h2 {
         font-size: clamp(26px, 3.5vw, 34px);
@@ -1310,7 +1500,7 @@
 
       /* Size Inclusive Section */
       .inclusive-section {
-        background: linear-gradient(135deg, var(--accent) 0%, #5a252c 100%);
+        background: linear-gradient(135deg, var(--primary) 0%, #2d2d2d 100%);
         color: #fff;
         padding: 80px 20px;
         text-align: center;
@@ -1369,7 +1559,7 @@
       .usecase-card:hover {
         transform: translateY(-8px);
         border-color: var(--accent);
-        box-shadow: 0 16px 40px rgba(114, 47, 55, 0.12);
+        box-shadow: 0 16px 40px rgba(212, 165, 165, 0.18);
       }
       .usecase-icon {
         font-size: 40px;
@@ -1970,11 +2160,13 @@
 
         <!-- Product Info -->
         <div class="product-info">
-          <h1>Aura-Sculpt Bodysuit</h1>
+          <h1>The Bodysuit That Hugs You Back</h1>
           <p class="tagline">
-            The bodysuit that <em>hugs you back</em>. Finally, shapewear that
-            feels like a weighted blanket you can wear to dinner.
-            Variable-tension zones hold you gently - <em>not squeeze</em>.
+            Imagine your favorite <em>weighted blanket</em> — but make it
+            fashion. Our variable-tension zones mimic a gentle embrace that
+            calms your nervous system, not shapewear that suffocates. Feel
+            <em>held, grounded, and calm</em> — whether you're at dinner, in the
+            office, or having a moment.
           </p>
 
           <!-- Social Proof -->
@@ -2073,23 +2265,23 @@
             </button>
           </div>
 
-          <!-- Features -->
+          <!-- Features - Anti-Anxiety Focus -->
           <div class="features-grid">
             <div class="feature-item">
-              <span class="feature-icon">🤗</span>
-              <span>Gentle hug, not squeeze</span>
+              <span class="feature-icon">🫂</span>
+              <span>Like a weighted blanket hug</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">🌡️</span>
-              <span>Graphene thermal regulation</span>
+              <span class="feature-icon">🧠</span>
+              <span>Calms your nervous system</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">🧲</span>
-              <span>Zero-trace magnetic closure</span>
+              <span class="feature-icon">💫</span>
+              <span>Feel held, not squeezed</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">🍑</span>
-              <span>Lifts, never flattens</span>
+              <span class="feature-icon">✨</span>
+              <span>Grounded confidence, all day</span>
             </div>
           </div>
 
@@ -2142,39 +2334,110 @@
           <div class="problems-list">
             <h2 class="problem-title">Sound Familiar?</h2>
             <div class="problem-item">
-              <span class="problem-x">✕</span>
+              <div class="problem-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M9 9l6 6M15 9l-6 6" />
+                </svg>
+              </div>
               <span>Shapewear that squeezes so tight you can't breathe</span>
             </div>
             <div class="problem-item">
-              <span class="problem-x">✕</span>
+              <div class="problem-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M9 9l6 6M15 9l-6 6" />
+                </svg>
+              </div>
               <span>That anxious, restless feeling that won't go away</span>
             </div>
             <div class="problem-item">
-              <span class="problem-x">✕</span>
+              <div class="problem-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M9 9l6 6M15 9l-6 6" />
+                </svg>
+              </div>
               <span
                 >Compression that flattens your curves instead of lifting</span
               >
             </div>
             <div class="problem-item">
-              <span class="problem-x">✕</span>
+              <div class="problem-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M9 9l6 6M15 9l-6 6" />
+                </svg>
+              </div>
               <span>Getting overheated in traditional shapewear</span>
             </div>
             <div class="problem-item">
-              <span class="problem-x">✕</span>
+              <div class="problem-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M9 9l6 6M15 9l-6 6" />
+                </svg>
+              </div>
               <span>Uncomfortable snaps that dig into your skin</span>
             </div>
           </div>
           <div class="solution-box">
-            <h3>There's a Better Way</h3>
+            <h3>Your Weighted Blanket Learned To Go Out</h3>
             <p>
-              What if your bodysuit could actually <em>calm</em> your nervous
-              system? Variable-tension zones that <em>hug</em> you gently.
-              Graphene fabric that breathes. Magnetic closures you can't feel.
-              This isn't shapewear. It's wearable wellness.
+              Remember how <em>safe and held</em> you feel under a weighted
+              blanket? We bottled that feeling. Our variable-tension zones apply
+              gentle, <em>therapeutic pressure</em> that signals your body to
+              relax — while looking like a $2,000 designer piece from The Row.
             </p>
             <div class="solution-highlight">
-              <span class="check-icon">✓</span>
-              Engineered for emotional regulation, not just figure control
+              <span class="check-icon">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <span
+                >Proprioceptive feedback that mimics a warm, grounding
+                embrace</span
+              >
             </div>
           </div>
         </div>
@@ -2193,8 +2456,8 @@
         <div class="influencer-grid">
           <div class="influencer-card">
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face"
-              alt="Influencer"
+              src="./images/worn-by-favorites/alix-earle.webp"
+              alt="Alix Earle wearing Aura-Sculpt"
               class="influencer-img"
             />
             <h4>@alix.earle</h4>
@@ -2205,8 +2468,8 @@
           </div>
           <div class="influencer-card">
             <img
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop&crop=face"
-              alt="Influencer"
+              src="./images/worn-by-favorites/monet-mcmichael.webp"
+              alt="Monet McMichael wearing Aura-Sculpt"
               class="influencer-img"
             />
             <h4>@monet.mcmichael</h4>
@@ -2217,8 +2480,8 @@
           </div>
           <div class="influencer-card">
             <img
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face"
-              alt="Influencer"
+              src="./images/worn-by-favorites/alex-cooper.webp"
+              alt="Alex Cooper wearing Aura-Sculpt"
               class="influencer-img"
             />
             <h4>@alexcooper</h4>
@@ -2237,7 +2500,8 @@
         <h2 class="section-title">Not Compression. Connection.</h2>
         <p class="section-subtitle">
           Other shapewear squeezes you into submission. We designed something
-          that holds you like you matter.
+          that <em>embraces</em> you — like someone who actually cares how you
+          feel.
         </p>
 
         <div class="difference-grid">
@@ -2320,13 +2584,90 @@
       </div>
     </section>
 
+    <!-- FAQ Section - Moved Up for Better Conversion -->
+    <section class="faq-section">
+      <div class="section">
+        <h2 class="section-title">Questions? We've Got You.</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How is this different from regular shapewear?
+            </div>
+            <div class="faq-answer">
+              <p>
+                Traditional shapewear applies uniform compression everywhere -
+                that's why it feels like a torture device. Aura-Sculpt uses
+                variable-tension zones: gentle at the chest so you can breathe,
+                supportive at the waist for that held feeling, and lifting at
+                the glutes without flattening. It's engineered to feel like a
+                hug, not a squeeze.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What's the "anti-anxiety" aspect about?
+            </div>
+            <div class="faq-answer">
+              <p>
+                The graduated compression mimics proprioceptive feedback - the
+                same principle behind weighted blankets. This gentle, consistent
+                pressure signals your parasympathetic nervous system to calm
+                down. Many customers tell us they feel grounded and secure, not
+                just "snatched."
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What size should I order?
+            </div>
+            <div class="faq-answer">
+              <p>
+                We recommend ordering your normal clothing size. The
+                variable-tension zones adapt to your body. If you're between
+                sizes, size up for a gentler hug or size down for more support.
+                Our extended range goes from XXXS to 7X.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How does the magnetic closure work?
+            </div>
+            <div class="faq-answer">
+              <p>
+                Micro-magnetic glide tracks replace bulky snaps. The panels seal
+                automatically when they get close - no fumbling in dark
+                bathrooms. The closure is thinner than paper, so you get zero
+                visible lines even under bodycon dresses.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What's the return policy?
+            </div>
+            <div class="faq-answer">
+              <p>
+                30-day no-questions-asked returns. If you don't feel that "held"
+                sensation we promise, send it back. We'll refund everything
+                including shipping. Your nervous system deserves to be happy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Founder Story Section -->
     <section class="founder-section">
       <div class="section">
         <div class="founder-grid">
           <div class="founder-image">
             <div class="founder-placeholder">
-              <span>Founder Photo</span>
+              <span class="founder-initials">MC</span>
             </div>
           </div>
           <div class="founder-content">
@@ -2511,83 +2852,6 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="section">
-        <h2 class="section-title">Questions? We've Got You.</h2>
-
-        <div class="faq-container">
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              How is this different from regular shapewear?
-            </div>
-            <div class="faq-answer">
-              <p>
-                Traditional shapewear applies uniform compression everywhere -
-                that's why it feels like a torture device. Aura-Sculpt uses
-                variable-tension zones: gentle at the chest so you can breathe,
-                supportive at the waist for that held feeling, and lifting at
-                the glutes without flattening. It's engineered to feel like a
-                hug, not a squeeze.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              What's the "anti-anxiety" aspect about?
-            </div>
-            <div class="faq-answer">
-              <p>
-                The graduated compression mimics proprioceptive feedback - the
-                same principle behind weighted blankets. This gentle, consistent
-                pressure signals your parasympathetic nervous system to calm
-                down. Many customers tell us they feel grounded and secure, not
-                just "snatched."
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              What size should I order?
-            </div>
-            <div class="faq-answer">
-              <p>
-                We recommend ordering your normal clothing size. The
-                variable-tension zones adapt to your body. If you're between
-                sizes, size up for a gentler hug or size down for more support.
-                Our extended range goes from XXXS to 7X.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              How does the magnetic closure work?
-            </div>
-            <div class="faq-answer">
-              <p>
-                Micro-magnetic glide tracks replace bulky snaps. The panels seal
-                automatically when they get close - no fumbling in dark
-                bathrooms. The closure is thinner than paper, so you get zero
-                visible lines even under bodycon dresses.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              What's the return policy?
-            </div>
-            <div class="faq-answer">
-              <p>
-                30-day no-questions-asked returns. If you don't feel that "held"
-                sensation we promise, send it back. We'll refund everything
-                including shipping. Your nervous system deserves to be happy.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Guarantee Section -->
     <section class="guarantee-section">
       <div class="section">
@@ -2730,8 +2994,6 @@
       const productImages = [
         "./images/product/photo_001 (1).jpg",
         "./images/product/photo_001 (2).jpg",
-        "./images/product/photo_002 (2).jpg",
-        "./images/product/photo_002 (3).jpg",
         "./images/product/photo_003 (1).jpg",
         "./images/product/Gemini_Generated_Image_ulk4iulk4iulk4iu (1) (1).png",
         "./images/product/Gemini_Generated_Image_ulk4iulk4iulk4iu (2).png",
